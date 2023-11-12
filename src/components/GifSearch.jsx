@@ -24,7 +24,8 @@ export default function GifSearch({setGif}) {
                 value={searchWord}
                 onChange={(evt) => {
                     setSearchWord(evt.target.value)
-                }} 
+                }}
+                placeholder="type of gif" 
             />
             <button type="submit">Search Gif</button>
         </form>

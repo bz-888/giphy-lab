@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import logo from './logo.svg';
-import './App.css';
 import GifDisplay from "./components/GifDisplay";
 import GifButton from "./components/GifButton";
 import GifSearch from "./components/GifSearch";
@@ -52,8 +51,10 @@ function App() {
     return (
       <main>
         <h1>Giphy</h1>
-        <GifSearch setGif={setGif}/>
-        <GifButton setRefresh={setRefresh}/>
+        <div>
+          <GifButton setRefresh={setRefresh}/>
+          <GifSearch setGif={setGif}/>
+        </div>
         {loading ? <h1>Loading...</h1> : <GifDisplay gif={gif} />}
       </main>
     );
